@@ -1,5 +1,7 @@
 FROM ubi8
 
+RUN ls /etc/yum.repos.d
+RUN cat /etc/yum.repos.d/*
 RUN yum update -y && \
     yum install -y openstack-ironic-api openstack-ironic-conductor crudini \
         iproute iptables dnsmasq httpd qemu-img parted gdisk ipxe-bootimgs psmisc procps-ng \
